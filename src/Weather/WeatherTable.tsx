@@ -30,24 +30,26 @@ const WeatherTable: React.FC<Props> = ({ data, headline, unit }) => {
             {Object.keys(firstRow)
               .filter((key) => key !== 'label')
               .map((key) => (
-                <TableCell align="right">{key}</TableCell>
+                <TableCell align="right" key={key}>
+                  {key}
+                </TableCell>
               ))}
           </TableRow>
         </TableHead>
         <TableBody>
           {data.map((row) => (
-            <TableRow>
-              <TableCell>{row.label}</TableCell>
-              <TableCell align="right">
+            <TableRow key={row.label}>
+              <TableCell key={`${row.label}-label-row`}>{row.label}</TableCell>
+              <TableCell key={`${row.label}-min-row`} align="right">
                 {row.min} {unit}
               </TableCell>
-              <TableCell align="right">
+              <TableCell key={`${row.label}-max-row`} align="right">
                 {row.max} {unit}
               </TableCell>
-              <TableCell align="right">
+              <TableCell key={`${row.label}-mean-row`} align="right">
                 {row.mean} {unit}
               </TableCell>
-              <TableCell align="right">
+              <TableCell key={`${row.label}-mode-row`} align="right">
                 {row.mode ? row.mode : '-'} {row.mode && unit}
               </TableCell>
             </TableRow>

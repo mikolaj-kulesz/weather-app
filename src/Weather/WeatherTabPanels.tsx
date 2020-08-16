@@ -26,7 +26,7 @@ const WeatherTabPanels: React.FC = () => {
       label: 'MORNING',
     },
     {
-      ...getSnapshot(weatherConditions[DataKeys.MORNING]),
+      ...getSnapshot(weatherConditions[DataKeys.NIGHT]),
       label: 'NIGHT',
     },
   ];

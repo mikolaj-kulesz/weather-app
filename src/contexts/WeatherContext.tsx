@@ -11,7 +11,7 @@ interface WeatherContext {
   weatherConditions: WeatherConditionsInstance;
 }
 
-const WeatherContext = React.createContext<WeatherContext>({
+export const WeatherContext = React.createContext<WeatherContext>({
   tabIndex: 0,
   setTabIndex: () => 0,
   weatherConditions,
@@ -24,6 +24,7 @@ const WeatherContextProvider: React.FC = ({ children }) => {
     setTabIndex,
     weatherConditions,
   };
+
   return (
     <WeatherContext.Provider value={value}>{children}</WeatherContext.Provider>
   );

@@ -38,7 +38,7 @@ const CurrentWeather = types.model({
   icon: types.maybe(types.string),
 });
 
-const WeatherConditions = types
+export const WeatherConditions = types
   .model({
     [DataKeys.HUMIDITY]: types.optional(SingleWeatherStatsTracker, {}),
     [DataKeys.DAY]: types.optional(SingleWeatherStatsTracker, {}),
