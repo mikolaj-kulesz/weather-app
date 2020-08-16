@@ -6,15 +6,15 @@ import {
   getSnapshot,
   Instance,
 } from 'mobx-state-tree';
-import { getWeatherInfo, TrackerClass } from '../services/weather';
+import { getWeatherInfo, TrackerClass } from '../api/weather';
 import {
   DataKeys,
   SingleDayData,
   Current,
   LocationCoordinates,
   ErrorTypes,
-} from '../services/types';
-import { getCoordinates } from '../services/geolocation';
+} from '../api/types';
+import { getCoordinates } from '../api/geolocation';
 import { defaultCoordinates } from './weather.fixtures';
 import { LoadingStates, LoadingState } from './types';
 

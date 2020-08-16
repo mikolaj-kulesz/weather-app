@@ -2,7 +2,7 @@ import React from 'react';
 import { getSnapshot } from 'mobx-state-tree';
 import { observer } from 'mobx-react';
 import WeatherTabPanel from './WeatherTabPanel';
-import { DataKeys } from '../services/types';
+import { DataKeys } from '../api/types';
 import { useWeatherContext } from '../contexts/WeatherContext';
 import WeatherTable from './WeatherTable';
 import { SingleWeatherStatsTrackerSnapshot } from '../models/weather';
